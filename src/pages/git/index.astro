@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeroGrid from "../../components/PageHeroGrid.astro";
+import AccordionGroup from "../../components/AccordionGroup.astro";
+
+const introduccionGit = [
+  {
+    number: "01",
+    title: "¿Qué es Git?",
+    href: "/git/introduccion",
+  },
+  {
+    number: "02",
+    title: "Configuración inicial de Git",
+    href: "/html/estructura-etiqueta",
+  },
+  {
+    number: "03",
+    title: "Atributos comunes en Git",
+    href: "/git/atributos",
+  },
+];
+---
+
+<Layout>
+  <main class="text-center">
+    <PageHeroGrid
+      title="Git"
+      description="Git es un sistema de control de versiones distribuido que permite a los desarrolladores gestionar y realizar un seguimiento de los cambios en el código fuente."
+      image="https://media.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif"
+      alt="Animación representando el lenguaje Git"
+    />
+    <AccordionGroup
+      title="Introducción a Git"
+      id="git-section-title"
+      lessons={introduccionGit}
+    />
+  </main>
+</Layout>

@@ -1,6 +1,9 @@
 ---
-import ActionCard from "./ActionCard.astro";
 import CardFlip from "./CardFlip.astro";
+const tagsGit = [
+  { label: "Git", color: "#ff9900" },
+  { label: "GitHub", color: "#ff9900" },
+];
 const tagsHTML = [
   { label: "HTML", color: "#ff9900" },
   { label: "Pug", color: "#ff9900" },
@@ -61,7 +64,16 @@ const tagsMisComponentesWeb = [
       role="list"
     >
       <!-- Reutilizable Card -->
-
+      <li role="listitem">
+        <CardFlip
+          title="Git"
+          description="Control de versiones y colaboración en proyectos."
+          href="/git"
+          image="https://media.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif"
+          alt="Logo Git"
+          tags={tagsGit}
+        />
+      </li>
       <li role="listitem">
         <CardFlip
           title="HTML"
