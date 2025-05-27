@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeroGrid from "../../components/PageHeroGrid.astro";
+import AccordionGroup from "../../components/AccordionGroup.astro";
+
+const cardsUI = [
+  {
+    number: "01",
+    title: "card simple",
+    href: "/mis-componentes/cards-ui/card-simple",
+  },
+  {
+    number: "02",
+    title: "card con flip",
+    href: "/mis-componentes/cards-ui/card-con-flip",
+  },
+  {
+    number: "03",
+    title: "card con CTA",
+    href: "/mis-componentes/cards-ui/card-con-cta",
+  },
+];
+---
+
+<Layout>
+  <main class="text-center">
+    <PageHeroGrid
+      title="Mis componentes"
+      description="Componentes reutilizables para la web"
+      image="https://media.giphy.com/media/WcYnTzdrjQphdu33xs/giphy.gif"
+      alt="Animación representando mis componentes"
+    />
+    <AccordionGroup
+      title="Cards UI"
+      id="html5-section-title"
+      lessons={cardsUI}
+    />
+  </main>
+</Layout>

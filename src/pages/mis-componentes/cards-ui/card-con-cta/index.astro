@@ -1,0 +1,293 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import PageHeroGrid from "../../../../components/PageHeroGrid.astro";
+import ActionCard from "../../../../components/ActionCard.astro";
+import CardFlip from "../../../../components/CardFlip.astro";
+const tagsHTML = [
+  { label: "HT", color: "#00bcd4" },
+  { label: "Pug", color: "#ff9800" },
+  { label: "Semántica", color: "#d500f9" },
+];
+---
+
+<Layout>
+  <main class="text-center">
+    <PageHeroGrid
+      title="Cards con CTA"
+      description="Las cards con CTA son una forma efectiva de presentar información y guiar a los usuarios hacia una acción específica."
+      image="https://media.giphy.com/media/WcYnTzdrjQphdu33xs/giphy.gif"
+      alt="Animación representando cards con CTA"
+    />
+    <section aria-labelledby="components-title" class="bg-[#0d0d0d]">
+      <h2 id="components-title" class="sr-only">Componentes Cards con CTA</h2>
+
+      <ul
+        class="flex flex-col gap-8 p-4"
+        role="list"
+        aria-label="Listado de componentes con CTA"
+        role="list"
+      >
+        <li>
+          <article
+            class="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-700 bg-[#121212] text-white shadow-lg"
+          >
+            <!-- Encabezado -->
+            <header class="flex items-center justify-between px-4 pt-4 pb-2">
+              <h2 class="text-lg font-semibold" aria-label="Título del recurso">
+                Card con CTA en borde inferior
+              </h2>
+              <button
+                id="copy-btn-1"
+                data-target="code-block-1"
+                aria-label="Copiar código"
+                class="bg-[#00ffff] text-[#2e2e2e] text-sm font-semibold px-4 py-2 rounded-[1rem] hover:bg-[#00bcd4] transition duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#121212] disabled:opacity-50"
+              >
+                Copy
+              </button>
+            </header>
+
+            <!-- Componente ActionCard (embebido visualmente) -->
+            <div class="p-4 max-w-sm mx-auto">
+              <ActionCard
+                title="CSS"
+                description="Lenguaje de estilos, bases visuales y apariencia estética."
+                href="./css/"
+                image="https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif"
+                alt="Animación representando código y desarrollo"
+              />
+            </div>
+
+            <!-- Línea divisoria -->
+            <hr class="my-4 border-gray-800" />
+
+            <!-- Código asociado -->
+            <div class="px-4 pb-4 text-left">
+              <section
+                class="overflow-x-auto bg-[#1a1a1a] text-white font-mono text-sm px-4 pt-4 pb-5 rounded-xl"
+                aria-labelledby="code-title"
+              >
+                <!-- Header tipo archivo -->
+                <div class="relative mb-4 flex items-center justify-center">
+                  <div class="absolute left-0 flex pl-1">
+                    <span class="w-3 h-3 mr-2 rounded-full bg-red-500/40"
+                    ></span>
+                    <span class="w-3 h-3 mr-2 rounded-full bg-yellow-500/40"
+                    ></span>
+                    <span class="w-3 h-3 mr-2 rounded-full bg-green-500/40"
+                    ></span>
+                  </div>
+                  <span id="code-title" class="text-xs text-slate-400"
+                    >html + tailwindcss</span
+                  >
+                </div>
+
+                <!-- Código limpio con llaves escapadas -->
+                <pre
+                  id="code-block-1"
+                  class="whitespace-pre-wrap font-mono text-sm text-gray-200 bg-[#1a1a1a] p-4 rounded-xl overflow-x-auto leading-relaxed">
+                <code>
+&lt;a
+  href=&quot;./css/&quot;
+  class=&quot;group relative flex flex-col justify-between bg-[#1a1a1a] rounded-2xl shadow-lg p-6 border border-[#2e2e2e] hover:border-[#00ffff] transition outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]&quot;
+  aria-labelledby=&quot;card-css-title&quot;
+&gt;
+  &lt;!-- Contenido principal --&gt;
+  &lt;div class=&quot;flex flex-col items-center text-center&quot;&gt;
+    &lt;div class=&quot;w-full aspect-video mb-4&quot;&gt;
+      &lt;img
+        src=&quot;https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif&quot;
+        alt=&quot;Animación representando código y desarrollo&quot;
+        class=&quot;w-full h-full object-contain rounded-lg&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;h3
+      id=&quot;card-css-title&quot;
+      class=&quot;text-xl font-semibold text-white mb-2&quot;
+    &gt;
+      CSS
+    &lt;/h3&gt;
+    &lt;p class=&quot;text-gray-400&quot;&gt;
+      Lenguaje de estilos, bases visuales y apariencia estética.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Badge visual --&gt;
+  &lt;div class=&quot;absolute -bottom-5 left-1/2 transform -translate-x-1/2 pointer-events-none&quot;&gt;
+    &lt;span
+      class=&quot;inline-block rounded-full bg-gradient-to-r from-[#2e2e2e] to-[#2e2e2e] px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-300 group-hover:text-[#1a1a1a] group-hover:from-[#00ffff] group-hover:to-[#00bcd4]&quot;
+    &gt;
+      Aprender más
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+              </code>
+            </pre>
+              </section>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article
+            class="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-700 bg-[#121212] text-white shadow-lg"
+          >
+            <!-- Encabezado -->
+            <header class="flex items-center justify-between px-4 pt-4 pb-2">
+              <h2 class="text-lg font-semibold" aria-label="Título del recurso">
+                Card Flip con CTA en borde inferior
+              </h2>
+              <button
+                id="copy-btn-2"
+                data-target="code-block-2"
+                aria-label="Copiar código"
+                class="bg-[#00ffff] text-[#2e2e2e] text-sm font-semibold px-4 py-2 rounded-[1rem] hover:bg-[#00bcd4] transition duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#121212] disabled:opacity-50"
+              >
+                Copy
+              </button>
+            </header>
+
+            <!-- Componente ActionCard (embebido visualmente) -->
+            <div class="p-4 max-w-sm mx-auto">
+              <CardFlip
+                title="HTML"
+                description="Marcado HTML y semántica. Estructura y contenido."
+                href="/html"
+                image="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+                alt="Logo HTML"
+                tags={tagsHTML}
+              />
+            </div>
+
+            <!-- Línea divisoria -->
+            <hr class="my-4 border-gray-800" />
+
+            <!-- Código asociado -->
+            <div class="px-4 pb-4 text-left">
+              <section
+                class="overflow-x-auto bg-[#1a1a1a] text-white font-mono text-sm px-4 pt-4 pb-5 rounded-xl"
+                aria-labelledby="code-title"
+              >
+                <!-- Header tipo archivo -->
+                <div class="relative mb-4 flex items-center justify-center">
+                  <div class="absolute left-0 flex pl-1">
+                    <span class="w-3 h-3 mr-2 rounded-full bg-red-500/40"
+                    ></span>
+                    <span class="w-3 h-3 mr-2 rounded-full bg-yellow-500/40"
+                    ></span>
+                    <span class="w-3 h-3 mr-2 rounded-full bg-green-500/40"
+                    ></span>
+                  </div>
+                  <span id="code-title" class="text-xs text-slate-400"
+                    >html + tailwindcss</span
+                  >
+                </div>
+
+                <!-- Código limpio con llaves escapadas -->
+                <pre
+                  id="code-block-2"
+                  class="whitespace-pre-wrap font-mono text-sm text-gray-200 bg-[#1a1a1a] p-4 rounded-xl overflow-x-auto leading-relaxed">
+                <code>
+&lt;a
+  href=&quot;/html&quot;
+  class=&quot;block w-[260px] h-[340px] [perspective:1000px] group relative no-underline&quot;
+  aria-labelledby=&quot;card-html-title&quot;
+&gt;
+  &lt;div class=&quot;relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]&quot;&gt;
+
+    &lt;!-- Cara frontal --&gt;
+    &lt;div class=&quot;absolute w-full h-full bg-[#1a1a1a] rounded-2xl shadow-lg border border-[#2e2e2e] [backface-visibility:hidden] flex flex-col items-center justify-center p-6 text-center&quot;&gt;
+      &lt;div&gt;
+        &lt;div class=&quot;w-full aspect-video mb-4&quot;&gt;
+          &lt;img
+            src=&quot;https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif&quot;
+            alt=&quot;Logo HTML&quot;
+            class=&quot;w-full h-full object-contain rounded-lg&quot;
+            loading=&quot;lazy&quot;
+          /&gt;
+        &lt;/div&gt;
+        &lt;h3 id=&quot;card-html-title&quot; class=&quot;text-xl font-semibold text-white mb-2&quot;&gt;
+          HTML
+        &lt;/h3&gt;
+        &lt;p class=&quot;text-gray-400 text-sm&quot;&gt;
+          Marcado HTML y semántica.&lt;br /&gt;
+          Estructura y contenido.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Badge en cara frontal --&gt;
+      &lt;div class=&quot;absolute -bottom-4 left-1/2 -translate-x-1/2 pointer-events-none&quot;&gt;
+        &lt;span
+          class=&quot;inline-block rounded-full bg-gradient-to-r from-[#2e2e2e] to-[#2e2e2e] px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-300 group-hover:text-[#1a1a1a] group-hover:from-[#00ffff] group-hover:to-[#00bcd4]&quot;
+        &gt;
+          Aprender más
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Cara trasera --&gt;
+    &lt;div class=&quot;absolute w-full h-full bg-[#1a1a1a] rounded-2xl shadow-lg border border-[#2e2e2e] [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center p-6 text-center text-white&quot;&gt;
+      
+      &lt;div&gt;
+        &lt;h4 class=&quot;text-base font-semibold mb-4&quot;&gt;Tags&lt;/h4&gt;
+        &lt;div class=&quot;flex flex-wrap justify-center gap-2&quot;&gt;
+          &lt;span class=&quot;px-3 py-1 bg-[#00bcd4] text-black rounded-full text-xs font-semibold&quot;&gt;HTML&lt;/span&gt;
+          &lt;span class=&quot;px-3 py-1 bg-[#ff9800] text-black rounded-full text-xs font-semibold&quot;&gt;Pug&lt;/span&gt;
+          &lt;span class=&quot;px-3 py-1 bg-[#d500f9] text-black rounded-full text-xs font-semibold&quot;&gt;Semántica&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Badge en cara trasera --&gt;
+      &lt;div class=&quot;absolute -bottom-4 left-1/2 -translate-x-1/2 pointer-events-none&quot;&gt;
+        &lt;span
+          class=&quot;inline-block rounded-full bg-gradient-to-r from-[#2e2e2e] to-[#2e2e2e] px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-300 group-hover:text-[#1a1a1a] group-hover:from-[#00ffff] group-hover:to-[#00bcd4]&quot;
+        &gt;
+          Aprender más
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/a&gt;
+
+              </code>
+            </pre>
+              </section>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll("[data-target]");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            const code = document.getElementById(targetId);
+
+            if (!code) return;
+
+            navigator.clipboard
+              .writeText(code.textContent)
+              .then(() => {
+                const originalText = button.textContent;
+                button.textContent = "Copied!";
+                button.disabled = true;
+
+                setTimeout(() => {
+                  button.textContent = originalText;
+                  button.disabled = false;
+                }, 2000);
+              })
+              .catch((err) => {
+                console.error("Error al copiar el código:", err);
+              });
+          });
+        });
+      });
+    </script>
+  </main>
+</Layout>

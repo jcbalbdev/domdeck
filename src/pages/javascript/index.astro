@@ -1,0 +1,104 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeroGrid from "../../components/PageHeroGrid.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <main class="text-center">
+    <PageHeroGrid
+      title="JavaScript"
+      description="JavaScript es un lenguaje de programación que permite implementar funcionalidades complejas en páginas web."
+      image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHppcDlkeDA1eXAxcjN6cTI2M25uaTZ1eGVoZ3E3eWM3emZ3OHd1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ln7z2eWriiQAllfVcn/giphy.gif"
+      alt="Animación representando el lenguaje JavaScript"
+    />
+
+    <section class="bg-[#0d0d0d] text-white px-6 py-10">
+      <div class="max-w-2xl mx-auto" aria-labelledby="html5-section-title">
+        <details open class="group">
+          <summary
+            id="html5-section-title"
+            class="text-xl sm:text-2xl font-bold cursor-pointer flex items-center justify-between border-b border-pink-600 pb-3 mb-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            Introducción a HTML5
+            <span
+              class="transform group-open:rotate-180 transition-transform text-sm"
+              >&#9660;</span
+            >
+          </summary>
+
+          <ol class="space-y-3 text-base sm:text-lg">
+            <li
+              class="flex justify-between border-b border-dotted border-gray-700 pb-2"
+            >
+              <a
+                href="/html/semantica"
+                class="flex justify-between w-full hover:text-pink-400"
+              >
+                <span
+                  ><span class="text-pink-500 font-semibold">01</span> HTML y la
+                  semántica web</span
+                >
+              </a>
+            </li>
+            <li
+              class="flex justify-between border-b border-dotted border-gray-700 pb-2"
+            >
+              <a
+                href="/html/estructura-etiqueta"
+                class="flex justify-between w-full hover:text-pink-400"
+              >
+                <span
+                  ><span class="text-pink-500 font-semibold">02</span> Estructura
+                  de una etiqueta HTML</span
+                >
+              </a>
+            </li>
+            <li
+              class="flex justify-between border-b border-dotted border-gray-700 pb-2"
+            >
+              <a
+                href="/html/atributos"
+                class="flex justify-between w-full hover:text-pink-400"
+              >
+                <span
+                  ><span class="text-pink-500 font-semibold">03</span> Atributos
+                  comunes en HTML</span
+                >
+              </a>
+            </li>
+            <li
+              class="flex justify-between border-b border-dotted border-gray-700 pb-2"
+            >
+              <a
+                href="/html/markdown"
+                class="flex justify-between w-full hover:text-pink-400"
+              >
+                <span
+                  ><span class="text-pink-500 font-semibold">04</span> Cómo escribir
+                  Markdown</span
+                >
+                <span class="text-yellow-400 text-sm font-semibold">MID</span>
+              </a>
+            </li>
+            <li
+              class="flex justify-between border-b border-dotted border-gray-700 pb-2"
+            >
+              <a
+                href="/html/tabla-etiquetas"
+                class="flex justify-between w-full hover:text-pink-400"
+              >
+                <span
+                  ><span class="text-pink-500 font-semibold">05</span> Tabla periódica
+                  de etiquetas HTML</span
+                >
+              </a>
+            </li>
+          </ol>
+        </details>
+      </div>
+    </section>
+  </main>
+</Layout>

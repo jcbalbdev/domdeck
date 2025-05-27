@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeroGrid from "../../components/PageHeroGrid.astro";
+import AccordionGroup from "../../components/AccordionGroup.astro";
+
+const introduccionHTML = [
+  {
+    number: "01",
+    title: "HTML y la semántica web",
+    href: "/html/semantica",
+  },
+  {
+    number: "02",
+    title: "Estructura de una etiqueta HTML",
+    href: "/html/estructura-etiqueta",
+  },
+  {
+    number: "03",
+    title: "Atributos comunes en HTML",
+    href: "/html/atributos",
+  },
+  {
+    number: "04",
+    title: "Cómo escribir Markdown",
+    href: "/html/markdown",
+    level: "MID",
+  },
+  {
+    number: "05",
+    title: "Tabla periódica de etiquetas HTML",
+    href: "/html/tabla-etiquetas",
+  },
+];
+const documentoHTML = [
+  {
+    number: "01",
+    title: "Estructura de documento HTML",
+    href: "/html/semantica",
+  },
+  {
+    number: "02",
+    title: "Estiquetas HTML obsoletas",
+    href: "/html/estructura-etiqueta",
+  },
+  {
+    number: "03",
+    title: "Validacion de errores HTML",
+    href: "/html/atributos",
+  },
+  {
+    number: "04",
+    title: "Atributos de metadatos e idiomas",
+    href: "/html/markdown",
+    level: "PRO",
+  },
+];
+---
+
+<Layout>
+  <main class="text-center">
+    <PageHeroGrid
+      title="HTML"
+      description="HTML (HyperText Markup Language) es el lenguaje estándar para estructurar el contenido de la web."
+      image="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+      alt="Animación representando el lenguaje HTML"
+    />
+    <AccordionGroup
+      title="Introducción a HTML5"
+      id="html5-section-title"
+      lessons={introduccionHTML}
+    />
+    <AccordionGroup
+      title="Documentación de HTML5"
+      id="html5-documentation-title"
+      lessons={documentoHTML}
+    />
+  </main>
+</Layout>

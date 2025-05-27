@@ -1,0 +1,300 @@
+---
+// Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="text-white"
+  role="contentinfo"
+  aria-label="Información del sitio web"
+>
+  <div class="bg-[#0d0d0d]">
+    <div class="relative isolate px-6 lg:px-8">
+      <!-- Fondo tipo grilla reticular con desvanecimiento superior -->
+      <div
+        class="absolute inset-0 opacity-20 pointer-events-none"
+        aria-hidden="true"
+        role="presentation"
+      >
+        <!-- Grilla SVG optimizada -->
+        <svg
+          class="w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <pattern
+              id="footer-grid"
+              width="10"
+              height="10"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 10 0 L 0 0 0 10"
+                fill="none"
+                stroke="#ff9900"
+                stroke-width="0.25"></path>
+            </pattern>
+            <!-- Gradiente de desvanecimiento superior -->
+            <linearGradient id="fade-gradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="white" stop-opacity="0"></stop>
+              <stop offset="25%" stop-color="white" stop-opacity="0.25"></stop>
+              <stop offset="50%" stop-color="white" stop-opacity="0.5"></stop>
+              <stop offset="75%" stop-color="white" stop-opacity="0.75"></stop>
+              <stop offset="100%" stop-color="white" stop-opacity="1"></stop>
+            </linearGradient>
+            <mask id="footgrid-mask">
+              <rect width="100%" height="100%" fill="url(#fade-gradient)"
+              ></rect>
+            </mask>
+          </defs>
+
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#footer-grid)"
+            mask="url(#footgrid-mask)"></rect>
+        </svg>
+      </div>
+
+      <!-- Contenido principal del footer -->
+      <div class="relative z-10 px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto">
+          <!-- Grid principal responsive -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+          >
+            <!-- Sección de branding -->
+            <div class="lg:col-span-1 space-y-6">
+              <!-- Logo/Marca -->
+              <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+                  DOMdeck
+                  <span class="text-[#ff9900] text-lg align-top font-mono"
+                    >{}</span
+                  >
+                </h2>
+                <p class="text-sm sm:text-base text-gray-300 leading-relaxed">
+                  Aquí encontrarás los conocimientos necesarios para convertirte
+                  en un
+                  <strong class="text-[#ff9900]">Jedi del desarrollo web</strong
+                  >.
+                </p>
+              </div>
+
+              <!-- Redes sociales -->
+              <div>
+                <h3 class="text-sm font-semibold text-gray-200 mb-3">
+                  Dale Star en:
+                </h3>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/jcbalbdev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visitar el perfil de GitHub de jcbalbdev (se abre en nueva pestaña)"
+                    class="group inline-flex items-center justify-center bg-white rounded-full hover:bg-white transition-all duration-200"
+                  >
+                    <img
+                      src="https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif"
+                      alt="GitHub"
+                      class="w-9 h-auto rounded-full group-hover:scale-110 transition-transform duration-200"
+                      loading="lazy"
+                      width="24"
+                      height="24"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navegación: Categorías -->
+            <nav class="space-y-4" aria-labelledby="categorias-heading">
+              <h3
+                id="categorias-heading"
+                class="text-sm font-semibold text-white uppercase tracking-wider"
+              >
+                Categorías
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="/#areas-de-aprendizaje"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200"
+                  >
+                    Áreas de aprendizaje
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/mis-componentes/"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200"
+                  >
+                    Componentes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/recursos"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200"
+                  >
+                    Recursos
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Navegación: Bases -->
+            <nav class="space-y-4" aria-labelledby="bases-heading">
+              <h3
+                id="bases-heading"
+                class="text-sm font-semibold text-white uppercase tracking-wider"
+              >
+                Tecnologías Base
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="/html"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >HTML</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/css"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >CSS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/tailwind"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Tailwind CSS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/javascript"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >JavaScript</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/typescript"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >TypeScript</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/nodejs"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Node.js</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/git"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Git</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/github"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Navegación: Frameworks -->
+            <nav class="space-y-4" aria-labelledby="frameworks-heading">
+              <h3
+                id="frameworks-heading"
+                class="text-sm font-semibold text-white uppercase tracking-wider"
+              >
+                Frameworks
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="/astro"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Astro</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/react"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >React</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/vue"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Vue</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/svelte"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Svelte</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/angular"
+                    class="text-sm text-gray-300 hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none focus:underline transition-colors duration-200;"
+                    >Angular</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Separador -->
+          <hr class="my-8 border-transparent" aria-hidden="true" />
+
+          <!-- Footer inferior -->
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left"
+          >
+            <p class="text-xs text-gray-400">
+              Desarrollado con
+              <span class="text-red-400" aria-label="amor">❤️</span>
+              para los Jedis del desarrollo web
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs text-gray-400"
+            >
+              <span>&copy; {currentYear} @jcbalbdev</span>
+              <div class="flex gap-4">
+                <a
+                  href="/privacidad"
+                  class="hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none transition-colors duration-200"
+                >
+                  Privacidad
+                </a>
+                <a
+                  href="/terminos"
+                  class="hover:text-[#ff9900] focus:text-[#ff9900] focus:outline-none transition-colors duration-200"
+                >
+                  Términos
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

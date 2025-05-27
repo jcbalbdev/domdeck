@@ -1,0 +1,28 @@
+---
+interface Tag {
+  label: string;
+  color: string;
+}
+
+interface Props {
+  tags: Tag[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div>
+  <h4 class="text-base font-semibold mb-4">Tags</h4>
+  <div class="flex flex-wrap justify-center gap-2">
+    {
+      tags.map(({ label, color }) => (
+        <span
+          class="px-3 py-1 text-black rounded-full text-xs font-semibold"
+          style={`background-color: ${color}`}
+        >
+          {label}
+        </span>
+      ))
+    }
+  </div>
+</div>

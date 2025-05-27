@@ -1,0 +1,49 @@
+---
+import AccordionListItem from "./AccordionListItem.astro";
+
+interface LessonItem {
+  number: string;
+  title: string;
+  href: string;
+  level?: string;
+}
+
+interface Props {
+  title: string;
+  id: string;
+  lessons: LessonItem[];
+}
+
+const { title, id, lessons } = Astro.props;
+---
+
+<section class="bg-[#0d0d0d] text-white px-6 py-1">
+  <div class="max-w-2xl mx-auto" aria-labelledby={id}>
+    <details name="info" open class="group">
+      <summary
+        id={id}
+        class="text-xl sm:text-2xl font-bold cursor-pointer flex items-center justify-between border-b border-[#00fff7] pb-3 mb-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+      >
+        {title}
+        <span
+          class="transform group-open:rotate-180 transition-transform text-sm"
+        >
+          &#9660;
+        </span>
+      </summary>
+
+      <ol class="text-gray-400 space-y-3 text-base sm:text-lg">
+        {
+          lessons.map((lesson) => (
+            <AccordionListItem
+              number={lesson.number}
+              title={lesson.title}
+              href={lesson.href}
+              level={lesson.level}
+            />
+          ))
+        }
+      </ol>
+    </details>
+  </div>
+</section>

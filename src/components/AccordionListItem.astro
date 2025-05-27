@@ -1,0 +1,21 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  href: string;
+  level?: string;
+}
+
+const { number, title, href, level } = Astro.props;
+---
+
+<li
+  class="flex justify-between border-b-2 border-dashed border-gray-600 px-2 pb-2"
+>
+  <a href={href} class="flex justify-between w-full hover:text-white">
+    <span
+      ><span class="text-[#00fff7] font-bold mr-2">{number}</span>{title}</span
+    >
+    <span class="text-[#ff9900] text-sm font-semibold">{level}</span>
+  </a>
+</li>

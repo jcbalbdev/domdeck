@@ -1,0 +1,157 @@
+---
+import ActionCard from "./ActionCard.astro";
+import CardFlip from "./CardFlip.astro";
+const tagsHTML = [
+  { label: "HTML", color: "#ff9900" },
+  { label: "Pug", color: "#ff9900" },
+];
+const tagsCSS = [
+  { label: "CSS", color: "#ff9900" },
+  { label: "Tailwind", color: "#ff9900" },
+];
+const tagsJavaScript = [
+  { label: "JavaScript", color: "#ff9900" },
+  { label: "TypeScript", color: "#ff9900" },
+];
+const tagsNodejs = [
+  { label: "Node.js", color: "#ff9900" },
+  { label: "Express", color: "#ff9900" },
+];
+const tagsAstro = [{ label: "Astro", color: "#ff9900" }];
+const tagsReact = [
+  { label: "React", color: "#ff9900" },
+  { label: "React Native", color: "#ff9900" },
+  { label: "Next.js", color: "#ff9900" },
+];
+const tagsPython = [
+  { label: "Python", color: "#ff9900" },
+  { label: "Flask", color: "#ff9900" },
+  { label: "Django", color: "#ff9900" },
+];
+const tagsRecursos = [
+  { label: "Recursos", color: "#ff9900" },
+  { label: "Herramientas", color: "#ff9900" },
+];
+const tagsMisComponentesWeb = [
+  { label: "Componentes", color: "#ff9900" },
+  { label: "Web", color: "#ff9900" },
+];
+---
+
+<section
+  class="bg-[#0d0d0d] py-6 px-6 pt-20 pb-16 lg:px-16"
+  aria-labelledby="section-title"
+>
+  <div class="max-w-4xl mx-auto">
+    <header class="text-center mb-16">
+      <h2
+        id="areas-de-aprendizaje"
+        class="text-4xl font-bold text-white sm:text-5xl"
+      >
+        Áreas de aprendizaje
+      </h2>
+      <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+        DOMdeck es el registro abierto de mi aprendizaje, desde HTML hasta
+        patrones de arquitectura en frontend.
+      </p>
+    </header>
+
+    <ul
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 list-none"
+      role="list"
+    >
+      <!-- Reutilizable Card -->
+
+      <li role="listitem">
+        <CardFlip
+          title="HTML"
+          description="Marcado HTML y semántica. Estructura y contenido."
+          href="/html"
+          image="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+          alt="Logo HTML"
+          tags={tagsHTML}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="CSS"
+          description="Lenguaje de estilos, bases visuales y apariencia estética."
+          href="/css"
+          image="https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif"
+          alt="Logo CSS"
+          tags={tagsCSS}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="JavaScript"
+          description="Lenguaje de programación para la web. Interactividad y dinamismo."
+          href="/javascript"
+          image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHppcDlkeDA1eXAxcjN6cTI2M25uaTZ1eGVoZ3E3eWM3emZ3OHd1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ln7z2eWriiQAllfVcn/giphy.gif"
+          alt="Logo JavaScript"
+          tags={tagsJavaScript}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="Node.js"
+          description="Entorno de ejecución para JavaScript en el lado del servidor."
+          href="/node"
+          image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHppcDlkeDA1eXAxcjN6cTI2M25uaTZ1eGVoZ3E3eWM3emZ3OHd1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kdFc8fubgS31b8DsVu/giphy.gif"
+          alt="Logo Node.js"
+          tags={tagsNodejs}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="Astro"
+          description="Framework para construir sitios web rápidos y optimizados."
+          href="/astro"
+          image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWdzYnphMmpyc2RkeTBpbmhyM3dvOWY2ZjM1dzEwa25tZGc2NzV1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/B61SFWeRCILrGoINTu/giphy.gif"
+          alt="Logo Astro"
+          tags={tagsAstro}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="React"
+          description="Framework para construir interfaces de usuario."
+          href="/react"
+          image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2Y3dXVsaWc2d2QxM2NjMXVjZDVtMjlpNTA5ajVkYjZ3dTgyMzgzMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eNAsjO55tPbgaor7ma/giphy.gif"
+          alt="Logo React"
+          tags={tagsReact}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="Python"
+          description="Lenguaje de programación de alto nivel, interpretado y de propósito general."
+          href="/python"
+          image="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif"
+          alt="Logo Python"
+          tags={tagsPython}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="Recursos"
+          description="Recopilación de materiales y herramientas útiles."
+          href="/recursos"
+          image="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHVuaWZxNXdjaHF1enR0aGJzNGd3ZjFka2ZtMmM5anU2ampsZ2ZzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ou60s0z0v7JzSWGn8C/giphy.gif"
+          alt="Logo Recursos"
+          tags={tagsRecursos}
+        />
+      </li>
+      <li role="listitem">
+        <CardFlip
+          title="Mis Componentes Web"
+          description="Conjuntos de elementos reutilizables para construir interfaces."
+          href="./mis-componentes/"
+          image="https://media.giphy.com/media/WcYnTzdrjQphdu33xs/giphy.gif"
+          alt="Logo Mis Componentes Web"
+          tags={tagsMisComponentesWeb}
+        />
+      </li>
+    </ul>
+  </div>
+</section>
