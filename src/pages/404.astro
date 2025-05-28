@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <main class="text-center">
+    <!-- Página de error 404 accesible, semántica y responsiva -->
+    <section
+      class="text-center bg-[#0d0d0d] text-white"
+      aria-labelledby="error-title"
+      role="region"
+    >
+      <div class="relative isolate px-6 lg:px-8">
+        <!-- Fondo tipo grilla reticular con desvanecimiento superior -->
+        <div
+          class="absolute inset-0 -z-10 opacity-20 pointer-events-none"
+          aria-hidden="true"
+        >
+          <svg
+            class="w-full h-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="grid"
+                width="10"
+                height="10"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 10 0 L 0 0 0 10"
+                  fill="none"
+                  stroke="#00fff7"
+                  stroke-width="0.25"></path>
+              </pattern>
+              <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="white" stop-opacity="1"></stop>
+                <stop offset="25%" stop-color="white" stop-opacity="0.75"
+                ></stop>
+                <stop offset="50%" stop-color="white" stop-opacity="0.5"></stop>
+                <stop offset="75%" stop-color="white" stop-opacity="0.25"
+                ></stop>
+                <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+              </linearGradient>
+              <mask id="grid-mask">
+                <rect width="100%" height="100%" fill="url(#fade)"></rect>
+              </mask>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#grid)"
+              mask="url(#grid-mask)"></rect>
+          </svg>
+        </div>
+
+        <!-- Contenido principal -->
+        <div
+          class="mx-auto max-w-4xl py-32 sm:py-36 lg:py-40 flex flex-col items-center gap-8"
+        >
+          <!-- Imagen ilustrativa del error -->
+          <figure
+            class="w-full max-w-md aspect-video"
+            role="img"
+            aria-label="Ilustración animada que representa un error 404"
+          >
+            <img
+              src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnJsYXd2cDhiNmZ2bDRkNWQ5d2NnZjl6bDZ0N3E4czMydHJ1NDRvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/0vTOscboHgOyBSuK4r/giphy.gif"
+              alt="GIF animado que representa error 404"
+              class="w-full h-full object-contain rounded-xl"
+              loading="lazy"
+            />
+          </figure>
+
+          <!-- Título y descripción -->
+          <header>
+            <h1
+              id="error-title"
+              class="text-5xl font-bold tracking-tight sm:text-9xl"
+            >
+              ERROR 404
+            </h1>
+            <p
+              class="mt-6 text-lg font-medium text-gray-300 sm:text-xl leading-relaxed max-w-3xl mx-auto"
+            >
+              Ups... Parece que esta página se perdió en el DOM. Pero no te
+              preocupes, puedes volver al inicio y seguir explorando.
+            </p>
+          </header>
+
+          <!-- Botón de regreso -->
+          <a
+            href="/"
+            class="mt-4 inline-block px-6 py-3 text-sm font-semibold text-[#0d0d0d] bg-[#00fff7] hover:bg-[#ff9900] rounded-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ff9900]"
+          >
+            Volver al inicio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
